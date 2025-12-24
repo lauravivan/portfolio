@@ -24,7 +24,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Homepage,
     }),
     createPage({
@@ -33,7 +32,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Articles,
     }),
     createPage({
@@ -42,7 +40,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Certifications,
     }),
     createPage({
@@ -51,7 +48,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: College,
     }),
     createPage({
@@ -60,7 +56,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Contact,
     }),
     createPage({
@@ -69,7 +64,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Courses,
     }),
     createPage({
@@ -78,7 +72,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Events,
     }),
     createPage({
@@ -87,7 +80,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Freelance,
     }),
     createPage({
@@ -96,7 +88,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Honors,
     }),
     createPage({
@@ -105,7 +96,6 @@ const metadata: IMetadata = {
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      iconPath: "",
       component: Publications,
     }),
   ],
