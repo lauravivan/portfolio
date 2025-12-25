@@ -4,17 +4,18 @@ import {
   Heading,
   Text,
   LinkMention,
+  Divider
 } from "@lauravivan/notion-portfolio";
 </script>
 
 <template>
-  <Empty />
-
   <Heading :level="3">
     Explorando tendências de carreiras de estudantes de sistemas de informação
     do IFSC-Câmpus Caçador através da linguagem de programação</Heading
   >
+
   <Text>CNMAC. Jan 20, 2025</Text>
+
   <Empty />
 
   <Text
@@ -27,14 +28,13 @@ import {
     in the field of Information Technology.</Text
   >
 
-  <br />
-
   <LinkMention
-    target=""
     href="https://proceedings.sbmac.org.br/sbmac/article/view/4826"
     emoji="🎓"
     >Access publication</LinkMention
   >
+
+  <Divider/>
 
   <Empty />
 
@@ -42,11 +42,10 @@ import {
     Interdisciplinaridade na Ciência: Relato de Experiência sobre o Trabalho em
     Conjunto na Área da Saúde e da Computação</Heading
   >
+
   <Text>Editora Udesc. May 26, 2022</Text>
 
-  <br />
   <LinkMention
-    target=""
     href="https://sistemabu.udesc.br/pergamumweb/vinculos/00009f/00009f95.pdf"
     emoji="🎓"
     >Access publication</LinkMention

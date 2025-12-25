@@ -5,6 +5,7 @@ import {
   Text,
   LinkMention,
   Column,
+  Image,
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -13,9 +14,7 @@ import {
 
   <Column :number-of-columns="2">
     <template #column-1>
-      <div class="courses__img-wrapper">
-        <!-- <img src="/ebac.png" /> -->
-      </div>
+      <Image src="/ebac.png" />
     </template>
     <template #column-2>
       <Text>Desenvolvimento Front-End do Zero ao Pro</Text>
@@ -27,8 +26,7 @@ import {
       <Text>2021 - 2023</Text>
       <br />
       <LinkMention
-        target=""
-        emoji="🐈"
+        emoji="🎓"
         href="https://static.lms.ebaconline.com.br/certs/115b328c-e890-4879-a789-622e2b59f84d.pdf"
         >Certificate of Completion</LinkMention
       >
@@ -56,17 +54,13 @@ import {
     for me.</Text
   >
 
-  <Empty />
-
   <Divider />
 
   <Empty />
 
   <Column :number-of-columns="2">
     <template #column-1>
-      <div class="courses__img-wrapper">
-        <!-- <img src="/udemy.png" /> -->
-      </div>
+      <Image src="/udemy.png" />
     </template>
     <template #column-2>
       <Text>JavaScript Unit Testing - The Practical Guide</Text>
@@ -78,8 +72,7 @@ import {
       <Text>2024</Text>
       <br />
       <LinkMention
-        target=""
-        emoji="🐈"
+        emoji="🎓"
         href="https://www.udemy.com/certificate/UC-3efc1286-ed24-496e-8939-a95f8c35e4cb/"
         >Certificate of Completion</LinkMention
       >
@@ -106,17 +99,13 @@ import {
     background with testing automation.
   </Text>
 
-  <Empty />
-
   <Divider />
 
   <Empty />
 
   <Column :number-of-columns="2">
     <template #column-1>
-      <div class="courses__img-wrapper">
-        <!-- <img src="/curso-em-video.webp" /> -->
-      </div>
+      <Image src="/curso-em-video.webp" />
     </template>
     <template #column-2>
       <Text>PYTHON 3 - MUNDOS 1, 2, 3</Text>
@@ -128,20 +117,17 @@ import {
       <Text>2021</Text>
       <br />
       <LinkMention
-        target=""
-        emoji="🐈"
+        emoji="🎓"
         href="https://www.cursoemvideo.com/validacao-de-certificado/"
         >Certificate of Completion Mundo 1 - ID 4986E-66E2-5</LinkMention
       >
       <LinkMention
-        target=""
-        emoji="🐈"
+        emoji="🎓"
         href="https://www.cursoemvideo.com/validacao-de-certificado/"
         >Certificate of Completion Mundo 2 - ID 4986E-67AC-2</LinkMention
       >
       <LinkMention
-        target=""
-        emoji="🐈"
+        emoji="🎓"
         href="https://www.cursoemvideo.com/validacao-de-certificado/"
         >Certificate of Completion Mundo 3 - ID 4986E-685A-7</LinkMention
       >
@@ -168,24 +154,3 @@ import {
     professor Guanabara, It was my first choice.</Text
   >
 </template>
-
-<!-- <style lang="scss">
-@use "@/assets/scss/_var.scss" as var;
-
-.courses {
-  &__img-wrapper {
-    height: 130px;
-    width: 130px;
-    flex: 1;
-
-    @media (max-width: var.$screen-small) {
-      flex: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-</style> -->

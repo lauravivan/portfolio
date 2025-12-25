@@ -5,11 +5,14 @@ import College from "@/pages/College.vue";
 import Contact from "@/pages/Contact.vue";
 import Courses from "@/pages/Courses.vue";
 import Events from "@/pages/Events.vue";
-import Homepage from "@/pages/index.vue";
+import Homepage from "@/pages/About.vue";
 
 import { createPage, type IMetadata } from "@lauravivan/notion-portfolio";
 import Honors from "@/pages/Honors.vue";
 import Publications from "@/pages/Publications.vue";
+import Projects from "@/pages/Projects.vue";
+import Github from "@/pages/Github.vue";
+import NotionPortfolio from "@/pages/NotionPortfolio.vue";
 
 const metadata: IMetadata = {
   user: {
@@ -92,14 +95,47 @@ const metadata: IMetadata = {
     }),
     createPage({
       id: "publications",
-      title: "My publications",
+      title: "Publications",
       bannerAuthor: "Danis Lou",
       bannerLink:
         "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       component: Publications,
     }),
+    createPage({
+      id: "projects",
+      title: "My projects",
+      bannerAuthor: "Danis Lou",
+      bannerLink:
+        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      component: Projects,
+    }),
+    createPage({
+      id: "github",
+      title: "My GitHub repos",
+      bannerAuthor: "Danis Lou",
+      bannerLink:
+        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      component: Github,
+    }),
   ],
   favorites: [],
 };
+
+metadata.favorites.push(metadata.pages[0]);
+metadata.favorites.push(metadata.pages[4]);
+metadata.favorites.push(metadata.pages[3]);
+metadata.favorites.push(metadata.pages[10]);
+
+metadata.pages.push(
+  createPage({
+    id: "notion-portfolio",
+    title: "Notion Portfolio",
+    bannerAuthor: "Danis Lou",
+    bannerLink:
+      "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+    component: NotionPortfolio,
+    parentPage: metadata.pages[10],
+  })
+);
 
 export default metadata;

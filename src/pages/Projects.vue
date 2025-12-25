@@ -1,24 +1,18 @@
 <script setup lang="ts">
-// import Gallery from "@/components/Gallery.vue";
-// import Empty from "@/components/Empty.vue";
-// import Project from "@/pages/Project.vue";
-// import { useStore } from "vuex";
-// import { computed } from "vue";
+import { Database, type PageInfo } from "@lauravivan/notion-portfolio";
+import metadata from "@/metadata";
+import NotionPortfolio from "./NotionPortfolio.vue";
 
-// const store = useStore();
-
-// const pages = computed(() => {
-//   const pages = store.getters.getPages;
-//   return pages.projects.pages;
-// });
+const pages = metadata.pages;
+const projects = pages.filter((p: PageInfo) => p.parentPage && p.parentPage.id === 'projects');
 </script>
 
 <template>
-  <!-- <Empty />
-  <Gallery
-    galleryTitle="My Projects"
+  <Database
+    title="My projects"
+    layout="gallery"
     :cardPreviewIsCover="true"
-    :component="Project"
-    :pages="pages"
-  /> -->
+    :component="NotionPortfolio"
+    :pages="projects"
+  />
 </template>
