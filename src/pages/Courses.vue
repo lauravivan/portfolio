@@ -4,38 +4,36 @@ import {
   Empty,
   Text,
   LinkMention,
-  Column,
+  Columns,
   Image,
+  TextHighlight,
+  Column
 } from "@lauravivan/notion-portfolio";
 </script>
 
 <template>
   <Empty />
 
-  <Column :number-of-columns="2">
-    <template #column-1>
+  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+    <Column>
       <Image src="/ebac.png" />
-    </template>
-    <template #column-2>
+    </Column>
+    <Column>
       <Text>Desenvolvimento Front-End do Zero ao Pro</Text>
-      <br />
-      <Text class="highlight">EBAC - Marcelo Cavalcanti</Text>
-      <br />
+      <TextHighlight>EBAC - Marcelo Cavalcanti</TextHighlight>
       <Text>Credential ID 11956-70519-75448-83098</Text>
-      <br />
       <Text>2021 - 2023</Text>
-      <br />
       <LinkMention
         emoji="🎓"
         href="https://static.lms.ebaconline.com.br/certs/115b328c-e890-4879-a789-622e2b59f84d.pdf"
         >Certificate of Completion</LinkMention
       >
-    </template>
-  </Column>
+    </Column>
+  </Columns>
 
   <Empty />
 
-  <Text class="highlight">About:</Text>
+  <TextHighlight>About:</TextHighlight>
 
   <Text>
     A very focused course on the basis of frontend (fundamentals), not attached
@@ -45,7 +43,7 @@ import {
 
   <Empty />
 
-  <Text class="highlight">Reasons I decided to take it:</Text>
+  <TextHighlight>Reasons I decided to take it:</TextHighlight>
 
   <Text>
     I decided to go to a free EBAC Webinar about CSS and coorelated stuff. There
@@ -54,34 +52,32 @@ import {
     for me.</Text
   >
 
+  <Empty/>
+
   <Divider />
 
   <Empty />
 
-  <Column :number-of-columns="2">
-    <template #column-1>
+  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+    <Column>
       <Image src="/udemy.png" />
-    </template>
-    <template #column-2>
+    </Column>
+    <Column>
       <Text>JavaScript Unit Testing - The Practical Guide</Text>
-      <br />
-      <Text class="highlight">Udemy - Maximilian Schwarzmüller</Text>
-      <br />
+      <TextHighlight>Udemy - Maximilian Schwarzmüller</TextHighlight>
       <Text>Credential ID UC-3efc1286-ed24-496e-8939-a95f8c35e4cb</Text>
-      <br />
       <Text>2024</Text>
-      <br />
       <LinkMention
         emoji="🎓"
         href="https://www.udemy.com/certificate/UC-3efc1286-ed24-496e-8939-a95f8c35e4cb/"
         >Certificate of Completion</LinkMention
       >
-    </template>
-  </Column>
+    </Column>
+  </Columns>
 
   <Empty />
 
-  <Text class="highlight">About:</Text>
+  <TextHighlight>About:</TextHighlight>
 
   <Text>
     In the course Max teaches about the automation of unit and integration
@@ -92,30 +88,28 @@ import {
 
   <Empty />
 
-  <Text class="highlight">Reasons I decided to take it:</Text>
+  <TextHighlight>Reasons I decided to take it:</TextHighlight>
 
   <Text>
     I was very excited about the way Max teaches and I was wanting to have a
     background with testing automation.
   </Text>
 
+  <Empty/>
+
   <Divider />
 
   <Empty />
 
-  <Column :number-of-columns="2">
-    <template #column-1>
+  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+    <Column>
       <Image src="/curso-em-video.webp" />
-    </template>
-    <template #column-2>
+    </Column>
+    <Column>
       <Text>PYTHON 3 - MUNDOS 1, 2, 3</Text>
-      <br />
-      <Text class="highlight">Curso em vídeo - Gustavo Guanabara</Text>
-      <br />
+      <TextHighlight>Curso em vídeo - Gustavo Guanabara</TextHighlight>
       <Text>Credential ID UC-3efc1286-ed24-496e-8939-a95f8c35e4cb</Text>
-      <br />
       <Text>2021</Text>
-      <br />
       <LinkMention
         emoji="🎓"
         href="https://www.cursoemvideo.com/validacao-de-certificado/"
@@ -131,12 +125,12 @@ import {
         href="https://www.cursoemvideo.com/validacao-de-certificado/"
         >Certificate of Completion Mundo 3 - ID 4986E-685A-7</LinkMention
       >
-    </template>
-  </Column>
+    </Column>
+  </Columns>
 
   <Empty />
 
-  <Text class="highlight">About:</Text>
+  <TextHighlight>About:</TextHighlight>
 
   <Text>
     A free Python course. The first world covered the fundamentals, the second
@@ -145,7 +139,7 @@ import {
 
   <Empty />
 
-  <Text class="highlight">Reasons I decided to take it:</Text>
+  <TextHighlight>Reasons I decided to take it:</TextHighlight>
 
   <Text>
     I was asked to learn about Python and Django enviroment when I first entered

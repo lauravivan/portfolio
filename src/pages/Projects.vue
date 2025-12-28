@@ -4,7 +4,7 @@ import metadata from "@/metadata";
 import NotionPortfolio from "./NotionPortfolio.vue";
 
 const pages = metadata.pages;
-const projects = pages.filter((p: PageInfo) => p.parentPage && p.parentPage.id === 'projects');
+const projects = Object.values(pages).filter((p: PageInfo) => p.parentPage && p.parentPage === 'projects');
 </script>
 
 <template>

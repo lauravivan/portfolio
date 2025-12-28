@@ -3,5 +3,5 @@ import Project from '../layouts/Project.vue';
 </script>
 
 <template>
-    <Project host-link="notion-portfolio.arualvivan.com" page-title="Notion Portfolio"></Project>
+    <Project host-link="https://notionportfolio.arualvivan.com" page-title="Notion Portfolio"></Project>
 </template>

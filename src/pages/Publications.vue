@@ -9,6 +9,7 @@ import {
 </script>
 
 <template>
+  <Empty/>
   <Heading :level="3">
     Explorando tendências de carreiras de estudantes de sistemas de informação
     do IFSC-Câmpus Caçador através da linguagem de programação</Heading

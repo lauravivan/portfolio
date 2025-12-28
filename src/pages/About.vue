@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   Callout,
-  Column,
+  Columns,
   BulletList,
   BulletItem,
   Divider,
@@ -11,6 +11,8 @@ import {
   Empty,
   Heading,
   LinkMention,
+  TextHighlight,
+  Column
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -22,8 +24,8 @@ import {
       web applications. Here in my portfolio you can access my projects and
       achievments.
     </Text>
-    <Column :number-of-columns="3">
-      <template #column-1>
+    <Columns :number-of-columns="3">
+      <Column>
         <Callout>Education...</Callout>
         <BulletList>
           <BulletItem>
@@ -38,9 +40,9 @@ import {
             (IFSC).</BulletItem
           >
         </BulletList>
-      </template>
+      </Column>
 
-      <template #column-2>
+      <Column>
         <Callout>Projects...</Callout>
         <BulletList>
           <BulletItem>
@@ -63,9 +65,9 @@ import {
             communicates with an external payment API.</BulletItem
           ></BulletList
         >
-      </template>
+      </Column>
 
-      <template #column-3>
+      <Column>
         <Callout>Goals...</Callout>
         <BulletList
           ><BulletItem
@@ -75,14 +77,18 @@ import {
             >Web development (full-stack) mid-level</BulletItem
           ></BulletList
         >
-      </template>
-    </Column>
+      </Column>
+    </Columns>
+
+    <Empty />
 
     <Divider />
 
     <Empty />
 
     <Heading :level="3">Resume/CV</Heading>
+
+    <Empty />
 
     <LinkMention
       href="https://www.canva.com/design/DAG0AypumF4/YPozcTGXLmAUqdARQbOApg/edit?utm_content=DAG0AypumF4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
@@ -104,6 +110,8 @@ import {
 
     <Heading :level="3">Technologies</Heading>
 
+    <Empty />
+
     <Text
       >What I had/have contact with will be checked, things that I want start
       having contact with and to dive deep will be unchecked</Text
@@ -111,9 +119,9 @@ import {
 
     <Empty />
 
-    <Column :number-of-columns="5">
-      <template #column-1>
-        <Text class="highlight">Programming Languages</Text>
+    <Columns :number-of-columns="5">
+      <Column>
+        <TextHighlight>Programming Languages</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">JavaScript</ToDoItem>
           <ToDoItem :is-checked="true">TypeScript</ToDoItem>
@@ -121,40 +129,40 @@ import {
           <ToDoItem :is-checked="true">Python</ToDoItem>
         </ToDoList>
         <Empty />
-        <Text class="highlight">Devops & Cloud</Text>
+        <TextHighlight>Devops & Cloud</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">Docker</ToDoItem>
-          <ToDoItem :is-checked="false">Kubernetes</ToDoItem>
-          <ToDoItem :is-checked="false">AWS</ToDoItem>
-          <ToDoItem :is-checked="false">Azure</ToDoItem>
+          <ToDoItem>Kubernetes</ToDoItem>
+          <ToDoItem>AWS</ToDoItem>
+          <ToDoItem>Azure</ToDoItem>
           <ToDoItem :is-checked="true"
             >Google Cloud: cloud functions, firebase</ToDoItem
           >
           <ToDoItem :is-checked="true">Github Actions</ToDoItem>
         </ToDoList>
-      </template>
-      <template #column-2>
-        <Text class="highlight">Building APIs</Text>
+      </Column>
+      <Column>
+        <TextHighlight>Building APIs</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">Express.js</ToDoItem>
           <ToDoItem :is-checked="true">Node.js</ToDoItem>
           <ToDoItem :is-checked="true">Nest.js</ToDoItem>
-          <ToDoItem :is-checked="false">Swagger</ToDoItem>
+          <ToDoItem>Swagger</ToDoItem>
           <ToDoItem :is-checked="true">Postman</ToDoItem>
           <ToDoItem :is-checked="true">Insomnia</ToDoItem>
           <ToDoItem :is-checked="true">Yaak</ToDoItem>
           <ToDoItem :is-checked="true">ReDoc</ToDoItem>
         </ToDoList>
         <Empty />
-        <Text class="highlight">CLI tools</Text>
+        <TextHighlight>CLI tools</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">Git</ToDoItem>
           <ToDoItem :is-checked="true">Curl</ToDoItem>
         </ToDoList>
         <Empty />
-      </template>
-      <template #column-3>
-        <Text class="highlight">Building UIs</Text>
+      </Column>
+      <Column>
+        <TextHighlight>Building UIs</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">React.js</ToDoItem>
           <ToDoItem :is-checked="true">Vue.js</ToDoItem>
@@ -178,9 +186,9 @@ import {
           <ToDoItem :is-checked="true">Browser Dev Tools</ToDoItem>
           <ToDoItem :is-checked="true">NextAuth.js</ToDoItem></ToDoList
         >
-      </template>
-      <template #column-4>
-        <Text class="highlight">Database</Text>
+      </Column>
+      <Column>
+        <TextHighlight>Database</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">PostgreSQL</ToDoItem>
           <ToDoItem :is-checked="true">MongoDB</ToDoItem>
@@ -190,13 +198,13 @@ import {
           <ToDoItem :is-checked="true">Firestore</ToDoItem>
           <ToDoItem :is-checked="true">TypeORM</ToDoItem>
           <ToDoItem :is-checked="true">Mongoose</ToDoItem>
-          <ToDoItem :is-checked="false">Prisma</ToDoItem>
+          <ToDoItem>Prisma</ToDoItem>
           <ToDoItem :is-checked="true">Sequelize</ToDoItem>
           <ToDoItem :is-checked="true">SQL</ToDoItem>
         </ToDoList>
-      </template>
-      <template #column-5>
-        <Text class="highlight">Testing</Text>
+      </Column>
+      <Column>
+        <TextHighlight>Testing</TextHighlight>
         <ToDoList>
           <ToDoItem :is-checked="true">Vitest</ToDoItem>
           <ToDoItem :is-checked="true">Jest</ToDoItem>
@@ -204,7 +212,7 @@ import {
           <ToDoItem :is-checked="true">Testcontainers</ToDoItem>
           <ToDoItem :is-checked="true">Testing Library</ToDoItem>
         </ToDoList>
-      </template>
-    </Column>
+      </Column>
+    </Columns>
   </main>
 </template>

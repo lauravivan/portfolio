@@ -4,6 +4,7 @@ import {
   BulletItem,
   BulletList,
   Empty,
+  Link
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -19,9 +20,9 @@ import {
   <Callout>Social Media</Callout>
   
   <BulletList>
-    <BulletItem>LinkedIn: linkedin.com/in/vivan-laura</BulletItem>
-    <BulletItem>Github: @lauravivan</BulletItem>
+    <BulletItem>LinkedIn: <Link href="https://linkedin.com/in/vivan-laura">https://linkedin.com/in/vivan-laura</Link></BulletItem>
+    <BulletItem>Github: <Link href="https://github.com/lauravivan">https://github.com/lauravivan</Link></BulletItem>
     <BulletItem>Devto: @vivanlaura</BulletItem>
-    <BulletItem>Lattes: https://lattes.cnpq.br/5593790214023154</BulletItem>
+    <BulletItem>Lattes: <Link href="https://lattes.cnpq.br/5593790214023154">https://lattes.cnpq.br/5593790214023154</Link></BulletItem>
   </BulletList>
 </template>

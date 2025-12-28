@@ -7,7 +7,7 @@ import Courses from "@/pages/Courses.vue";
 import Events from "@/pages/Events.vue";
 import Homepage from "@/pages/About.vue";
 
-import { createPage, type IMetadata } from "@lauravivan/notion-portfolio";
+import { type IMetadata } from "@lauravivan/notion-portfolio";
 import Honors from "@/pages/Honors.vue";
 import Publications from "@/pages/Publications.vue";
 import Projects from "@/pages/Projects.vue";
@@ -19,123 +19,161 @@ const metadata: IMetadata = {
     author: `Laura Vivan's Portfolio`,
     socialMedia: "@lauravivan",
   },
-  pages: [
-    createPage({
+  pages: {
+    about: {
       id: "about",
       title: "About (me)",
       isHomepage: true,
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/about.webp",
+      },
+      icon: {
+        path: "/icons/about.png",
+      },
       component: Homepage,
-    }),
-    createPage({
+      path: "/",
+    },
+    articles: {
       id: "articles",
       title: "My articles",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/articles.webp",
+      },
+      icon: {
+        path: "/icons/articles.png",
+      },
       component: Articles,
-    }),
-    createPage({
+      path: "/articles",
+    },
+    certifications: {
       id: "certifications",
-      title: "Certifications",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      title: "My certifications",
+      banner: {
+        path: "/banners/certifications.webp",
+      },
+      icon: {
+        path: "/icons/certifications.png",
+      },
       component: Certifications,
-    }),
-    createPage({
+      path: "/certifications",
+    },
+    college: {
       id: "college",
       title: "Academic and Community Involvement",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/college.webp",
+      },
+      icon: {
+        path: "/icons/college.png",
+      },
       component: College,
-    }),
-    createPage({
+      path: "/college",
+    },
+    contact: {
       id: "contact",
       title: "Contact (me)",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/contact.webp",
+      },
+      icon: {
+        path: "/icons/contact.png",
+      },
       component: Contact,
-    }),
-    createPage({
+      path: "/contact",
+    },
+    courses: {
       id: "courses",
       title: "Courses I took",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/courses.webp",
+      },
+      icon: {
+        path: "/icons/courses.png",
+      },
       component: Courses,
-    }),
-    createPage({
+      path: "/courses",
+    },
+    events: {
       id: "events",
       title: "Community & Events",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/events.webp",
+      },
+      icon: {
+        path: "/icons/events.png",
+      },
       component: Events,
-    }),
-    createPage({
+      path: "/events",
+    },
+    freelance: {
       id: "freelance",
       title: "Freelance",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/freelance.webp",
+      },
+      icon: {
+        path: "/icons/freelance.png",
+      },
       component: Freelance,
-    }),
-    createPage({
+      path: "/freelance",
+    },
+    "honors-and-awards": {
       id: "honors-and-awards",
       title: "My honors and Awards",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/honors-and-awards.webp",
+      },
+      icon: {
+        path: "/icons/honors-and-awards.png",
+      },
       component: Honors,
-    }),
-    createPage({
+      path: "/honors-and-awards",
+    },
+    publications: {
       id: "publications",
       title: "Publications",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/publications.webp",
+      },
+      icon: {
+        path: "/icons/publications.png",
+      },
       component: Publications,
-    }),
-    createPage({
+      path: "/publications",
+    },
+    projects: {
       id: "projects",
       title: "My projects",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/projects.webp",
+      },
+      icon: {
+        path: "/icons/projects.png",
+      },
       component: Projects,
-    }),
-    createPage({
+      path: "/projects",
+      pages: ['notion-portfolio']
+    },
+    github: {
       id: "github",
       title: "My GitHub repos",
-      bannerAuthor: "Danis Lou",
-      bannerLink:
-        "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      banner: {
+        path: "/banners/github.webp",
+      },
+      icon: {
+        path: "/icons/github.png",
+      },
       component: Github,
-    }),
-  ],
-  favorites: [],
+      path: "/github",
+    },
+    "notion-portfolio": {
+      id: "notion-portfolio",
+      title: "Notion Portfolio",
+      component: NotionPortfolio,
+      parentPage: "projects",
+    },
+  },
+  favorites: ["about", "contact", "college", "projects"],
 };
-
-metadata.favorites.push(metadata.pages[0]);
-metadata.favorites.push(metadata.pages[4]);
-metadata.favorites.push(metadata.pages[3]);
-metadata.favorites.push(metadata.pages[10]);
-
-metadata.pages.push(
-  createPage({
-    id: "notion-portfolio",
-    title: "Notion Portfolio",
-    bannerAuthor: "Danis Lou",
-    bannerLink:
-      "https://unsplash.com/photos/restaurant-with-people-dining-in-jfZfdQtcH6k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-    component: NotionPortfolio,
-    parentPage: metadata.pages[10],
-  })
-);
 
 export default metadata;

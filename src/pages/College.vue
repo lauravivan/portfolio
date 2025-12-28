@@ -226,9 +226,7 @@ import {
     >My Testimony</LinkMention
   >
 
-  <LinkMention
-    emoji="🥬"
-    href="https://projeto-vila-usina.blogspot.com/"
+  <LinkMention emoji="🥬" href="https://projeto-vila-usina.blogspot.com/"
     >Project Vila Usina</LinkMention
   >
 
@@ -266,6 +264,8 @@ import {
     >
   </BulletList>
 
+  <Empty />
+
   <Divider />
 
   <Empty />
@@ -290,7 +290,10 @@ import {
 
   <Heading :level="3">#2 Meeting</Heading>
 
-  <Text>I was invited to share about AcessiWeb system (my college final project) and also Digital Girls Program award.</Text>
+  <Text
+    >I was invited to share about AcessiWeb system (my college final project)
+    and also Digital Girls Program award.</Text
+  >
 
   <Image src="/conexao-si-2.webp" />
 </template>
