@@ -1,5 +1,5 @@
-import { createApp } from "vue";
 import "@lauravivan/notion-portfolio/dist/notion-portfolio.css";
+import { createApp } from "vue";
 import {
   createRouter,
   createWebHistory,

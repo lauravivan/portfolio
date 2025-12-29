@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lauravivan/notion-portfolio": "^1.1.0",
+    "@lauravivan/notion-portfolio": "^1.1.2",
     "pinia": "^3.0.4",
     "vue": "^3.4.0",
     "vue-router": "^4.6.3"
