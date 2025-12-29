@@ -12,9 +12,7 @@ import {
 </script>
 
 <template>
-  <Empty />
-
-  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+  <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
     <Column>
       <Image src="/ebac.png" />
     </Column>
@@ -58,7 +56,7 @@ import {
 
   <Empty />
 
-  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+  <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
     <Column>
       <Image src="/udemy.png" />
     </Column>
@@ -101,7 +99,7 @@ import {
 
   <Empty />
 
-  <Columns :number-of-columns="2" :col1Size="10" :col2Size="90">
+  <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
     <Column>
       <Image src="/curso-em-video.webp" />
     </Column>

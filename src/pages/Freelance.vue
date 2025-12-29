@@ -11,7 +11,6 @@ import {
 </script>
 
 <template>
-  <Empty/>
   <Heading :level="2">Lyva & Estudos Arquivados</Heading>
 
   <Callout>Contract Full-Stack Developer</Callout>

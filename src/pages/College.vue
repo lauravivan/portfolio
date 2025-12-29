@@ -13,8 +13,6 @@ import {
 </script>
 
 <template>
-  <Empty />
-
   <Heading :level="2">AcessiWeb</Heading>
 
   <Callout

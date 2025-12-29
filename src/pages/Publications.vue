@@ -9,7 +9,6 @@ import {
 </script>
 
 <template>
-  <Empty/>
   <Heading :level="3">
     Explorando tendências de carreiras de estudantes de sistemas de informação
     do IFSC-Câmpus Caçador através da linguagem de programação</Heading
@@ -35,9 +34,9 @@ import {
     >Access publication</LinkMention
   >
 
-  <Divider/>
+  <Empty/>
 
-  <Empty />
+  <Divider/>
 
   <Heading :level="3">
     Interdisciplinaridade na Ciência: Relato de Experiência sobre o Trabalho em

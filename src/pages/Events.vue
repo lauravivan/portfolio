@@ -11,6 +11,8 @@ import { Callout, Heading, Image, Empty } from "@lauravivan/notion-portfolio";
     opportunity.</Callout
   >
 
+  <Empty/>
+
   <Image src="/meetup-codecon.webp" />
 
   <Empty />

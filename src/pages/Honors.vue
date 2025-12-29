@@ -3,7 +3,6 @@ import { Divider, Empty, Heading, Text, Image } from "@lauravivan/notion-portfol
 </script>
 
 <template>
-  <Empty/>
   <Heading :level="3"> Outstanding Student</Heading>
 
   <Text>Programa Meninas Digitais</Text>

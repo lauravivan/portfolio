@@ -18,11 +18,14 @@ import {
 
 <template>
   <Text>Hey there 👋!</Text>
+  
   <Text
     >My name is Laura, and I'm a passionate Web developer building end to end
     web applications. Here in my portfolio you can access my projects and
     achievments.
   </Text>
+
+  <Empty/>
   <Columns :number-of-columns="3">
     <Column>
       <Callout>Education...</Callout>
@@ -107,8 +110,6 @@ import {
   <Empty />
 
   <Heading :level="3">Technologies</Heading>
-
-  <Empty />
 
   <Text
     >What I had/have contact with will be checked, things that I want start

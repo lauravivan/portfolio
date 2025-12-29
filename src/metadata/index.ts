@@ -171,6 +171,7 @@ const metadata: IMetadata = {
       title: "Notion Portfolio",
       component: NotionPortfolio,
       parentPage: "projects",
+      path: '/notion-portfolio'
     },
   },
   favorites: ["about", "contact", "college", "projects"],
