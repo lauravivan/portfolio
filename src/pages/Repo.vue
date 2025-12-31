@@ -1,74 +1,63 @@
 <script setup lang="ts">
-// import Database from "@/components/Database.vue";
-// import Icon from "@/components/Icon.vue";
-// import Text from "@/components/Text.vue";
-// import Empty from "@/components/Empty.vue";
-// import { computed } from "vue";
-// import { useStore } from "vuex";
+import { GH_REPO_URL } from "@/constants";
+import {
+  Empty,
+  Text,
+  TextHighlight,
+  useStore,
+} from "@lauravivan/notion-portfolio";
+import { storeToRefs } from "pinia";
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 
-// const store = useStore();
-// const icons = computed(() => store.getters.getIcons);
+const route = useRoute();
 
-// const props = defineProps(["page", "hideDatabase"]);
+const store = storeToRefs(useStore);
+
+const desc = ref("");
+const gitUrl = ref("");
+const projectUrl = ref("");
+const starCount = ref(0);
+const watchCount = ref(0);
+const forkCount = ref(0);
+
+onMounted(async () => {
+  const paramId = route.params.id;
+
+  const id = paramId && typeof paramId === "string" ? paramId : store.getCurrentModalPageId.value;
+
+  if (id) {
+    try {
+      const res = await fetch(GH_REPO_URL.replace("{repo-name}", id));
+      const resJSON = await res.json();
+
+      desc.value = resJSON.description;
+      gitUrl.value = resJSON.html_url;
+      projectUrl.value = resJSON.homepage;
+      starCount.value = resJSON.stargazers_count;
+      watchCount.value = resJSON.watchers_count;
+      forkCount.value = resJSON.forks_count;
+    } catch {}
+  }
+});
 </script>
 
 <template>
-  <!-- <Database
-    v-if="!props.hideDatabase && props.page"
-    :multiSelectItems="props.page.ghData.languages"
-  >
-    <template #dateTimeDesc>Created</template>
-    <template #multiSelectDesc>Used languages</template>
-  </Database>
-  <div class="repo" v-if="props.page">
-    <div class="repo__metrics">
-      <div class="repo__metric">
-        <Icon :icon="icons.star" />
-        <div>{{ props.page.ghData.starCount }}</div>
-      </div>
-      <div class="repo__metric">
-        <Icon :icon="icons.eye" />
-        <div>{{ props.page.ghData.watchCount }}</div>
-      </div>
-      <div class="repo__metric">
-        <Icon :icon="icons.forkCode" />
-        <div>{{ props.page.ghData.forkCount }}</div>
-      </div>
-    </div>
-    <Empty />
-    <Text v-if="props.page.ghData.desc"
-      >Description: {{ props.page.ghData.desc }}</Text
-    >
-    <Empty />
-    <Text style="display: flex; flex-wrap: wrap; column-gap: 10px">
-      <Icon :icon="icons.code" />
-      <span class="highlight">Link github: </span
-      ><a :href="props.page.ghData.gitUrl">{{ props.page.ghData.gitUrl }}</a>
-    </Text>
-    <Text
-      v-if="props.page.ghData.url"
-      style="display: flex; flex-wrap: wrap; column-gap: 10px"
-    >
-      <Icon :icon="icons.link" />
-      <span class="highlight">Link page: </span
-      ><a :href="props.page.ghData.ghUrl">{{ props.page.ghData.url }}</a>
-    </Text>
-  </div> -->
+  <Text>⭐ {{ starCount }} 👁️ {{ watchCount }} 🕸️ {{ forkCount }}</Text>
+
+  <Empty />
+
+  <Text>Description: {{ desc }}</Text>
+
+  <Empty />
+
+  <Text>
+    <TextHighlight>Link github: </TextHighlight>
+    {{ gitUrl }}
+  </Text>
+
+  <Text v-if="projectUrl">
+    <TextHighlight>Link project: </TextHighlight>
+    {{ projectUrl }}
+  </Text>
 </template>
-
-
-
-<!-- <style lang="scss">
-@use "@/assets/scss/main.scss";
-@use "@/assets/scss/_mixin.scss" as mixin;
-
-.repo {
-  &__metrics {
-    @include mixin.flex-layout($flex-direction: row, $column-gap: 15px);
-  }
-
-  &__metric {
-    @include mixin.flex-layout($flex-direction: row, $column-gap: 10px);
-  }
-}
-</style> -->

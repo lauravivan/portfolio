@@ -85,8 +85,6 @@ import {
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="3">Resume/CV</Heading>
 
   <Empty />
@@ -106,8 +104,6 @@ import {
   <Empty />
 
   <Divider />
-
-  <Empty />
 
   <Heading :level="3">Technologies</Heading>
 

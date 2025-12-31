@@ -12,7 +12,10 @@ import Honors from "@/pages/Honors.vue";
 import Publications from "@/pages/Publications.vue";
 import Projects from "@/pages/Projects.vue";
 import Github from "@/pages/Github.vue";
-import NotionPortfolio from "@/pages/NotionPortfolio.vue";
+import NotionPortfolio from "@/pages/projects/NotionPortfolio.vue";
+import Volunteering from "@/pages/Volunteering.vue";
+import Yoko from "@/pages/projects/Yoko.vue";
+import Repo from "@/pages/Repo.vue";
 
 const metadata: IMetadata = {
   user: {
@@ -141,6 +144,18 @@ const metadata: IMetadata = {
       component: Publications,
       path: "/publications",
     },
+    volunteering: {
+      id: "volunteering",
+      title: "Volunteering",
+      banner: {
+        path: "/banners/volunteering.webp",
+      },
+      icon: {
+        path: "/icons/volunteering.png",
+      },
+      component: Volunteering,
+      path: "/volunteering",
+    },
     projects: {
       id: "projects",
       title: "My projects",
@@ -152,7 +167,7 @@ const metadata: IMetadata = {
       },
       component: Projects,
       path: "/projects",
-      pages: ['notion-portfolio']
+      pages: ["notion-portfolio", "yoko"],
     },
     github: {
       id: "github",
@@ -165,16 +180,70 @@ const metadata: IMetadata = {
       },
       component: Github,
       path: "/github",
+      pages: ["repo"],
+    },
+    repo: {
+      id: "repo",
+      title: "Repo",
+      icon: {
+        path: "/icons/github.png",
+      },
+      component: Repo,
+      path: `/github/:id`,
+      parentPage: "github",
     },
     "notion-portfolio": {
       id: "notion-portfolio",
       title: "Notion Portfolio",
       component: NotionPortfolio,
       parentPage: "projects",
-      path: '/notion-portfolio'
+      path: "/notion-portfolio",
+      icon: {
+        path: "/icons/about.png",
+      },
+      databaseInfo: {
+        Created: {
+          icon: "clock",
+          value: "December 2023",
+        },
+        Tags: {
+          icon: "code",
+          value: ["NPM package", "Vue.js", "Pinia", "Vue router"],
+        },
+      },
+    },
+    yoko: {
+      id: "yoko",
+      title: "Yoko!",
+      component: Yoko,
+      parentPage: "projects",
+      path: "/yoko",
+      banner: {
+        path: "/banners/yoko.webp",
+      },
+      icon: {
+        path: "/icons/yoko.png",
+      },
+      databaseInfo: {
+        Created: {
+          icon: "clock",
+          value: "May 2024",
+        },
+        Tags: {
+          icon: "code",
+          value: ["TypeScript", "React.js", "React router", 'Zustand'],
+        },
+      },
     },
   },
-  favorites: ["about", "contact", "college", "projects"],
+  favorites: [
+    "about",
+    "contact",
+    "college",
+    "volunteering",
+    "freelance",
+    "projects",
+  ],
 };
 
 export default metadata;

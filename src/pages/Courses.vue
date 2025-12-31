@@ -7,13 +7,34 @@ import {
   Columns,
   Image,
   TextHighlight,
-  Column
+  Column,
+  isTouchDevice,
 } from "@lauravivan/notion-portfolio";
+import { onMounted, onUnmounted, ref, watch } from "vue";
+
+const isMobile = ref(false);
+const windowWidth = ref(window.innerWidth);
+
+const handleResize = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", handleResize);
+});
+
+watch(windowWidth, (newWidth) => {
+  isMobile.value = isTouchDevice() || newWidth <= 480;
+});
 </script>
 
 <template>
   <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
-    <Column>
+    <Column v-if="!isMobile">
       <Image src="/ebac.png" />
     </Column>
     <Column>
@@ -50,14 +71,14 @@ import {
     for me.</Text
   >
 
-  <Empty/>
+  <Empty />
 
   <Divider />
 
   <Empty />
 
   <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
-    <Column>
+    <Column v-if="!isMobile">
       <Image src="/udemy.png" />
     </Column>
     <Column>
@@ -93,14 +114,14 @@ import {
     background with testing automation.
   </Text>
 
-  <Empty/>
+  <Empty />
 
   <Divider />
 
   <Empty />
 
   <Columns :number-of-columns="2" :col1Size="20" :col2Size="80">
-    <Column>
+    <Column v-if="!isMobile">
       <Image src="/curso-em-video.webp" />
     </Column>
     <Column>

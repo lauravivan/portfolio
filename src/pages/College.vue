@@ -99,8 +99,6 @@ import {
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="2">Saúde 4.0 - Risk Classification in UBS</Heading>
 
   <Callout
@@ -178,13 +176,13 @@ import {
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="2"
     >Social Entrepreneurship Initiative, Vila Usina, Caçador-SC</Heading
   >
 
   <Text class="highlight">Mar 2022 - July 2022</Text>
+
+  <Empty/>
 
   <Text
     >The Vila Hortaliça project grew from a university-based social
@@ -240,8 +238,6 @@ import {
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="2">Teaching Assistant</Heading>
 
   <Text class="highlight">Aug 2021 - Dec 2021</Text>
@@ -266,8 +262,6 @@ import {
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="2"
     >Women in Information Systems Meeting – Conexão SI</Heading
   >
@@ -278,13 +272,9 @@ import {
     female participation in technology.</Callout
   >
 
-  <Empty />
-
   <Heading :level="3">#1 Meeting</Heading>
 
   <Image src="/conexao-si.webp" />
-
-  <Empty />
 
   <Heading :level="3">#2 Meeting</Heading>
 

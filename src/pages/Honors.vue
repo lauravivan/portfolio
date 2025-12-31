@@ -22,8 +22,6 @@ import { Divider, Empty, Heading, Text, Image } from "@lauravivan/notion-portfol
 
   <Divider />
 
-  <Empty />
-
   <Heading :level="3"
     >2nd place in the 1st Big Data & Data Analytics Datathon (2025/1)</Heading
   >
