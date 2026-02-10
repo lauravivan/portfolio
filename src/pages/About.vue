@@ -61,7 +61,7 @@ import {
           help with more assertive research.
         </BulletItem>
         <BulletItem
-          >- Still, as freelancer, I developed from scratch a web system to help
+          >Still, as freelancer, I developed from scratch a web system to help
           payment splitting between health professionals. The platform
           communicates with an external payment API.</BulletItem
         ></BulletList
