@@ -90,15 +90,15 @@ import {
   <Empty />
 
   <LinkMention
-    href="https://www.canva.com/design/DAG0AypumF4/YPozcTGXLmAUqdARQbOApg/edit?utm_content=DAG0AypumF4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    href="https://docs.google.com/document/d/1ZxWvOuzFilptDO9jme-KYIWj6EqhW9Ws-hQFZl-PhIY/edit?usp=sharing"
     emoji="👋"
     >Access my resume in Portuguese</LinkMention
   >
 
   <LinkMention
-    href="https://www.canva.com/design/DAG0A26TDnU/YHmnPBU-YM5Pl497cu4AAw/edit?utm_content=DAG0A26TDnU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    href=""
     emoji="👋"
-    >Access my resume in English</LinkMention
+    >Access my resume in English (in progress...)</LinkMention
   >
 
   <Empty />
