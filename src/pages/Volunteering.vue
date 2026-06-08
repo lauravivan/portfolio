@@ -26,7 +26,7 @@ const isPageFullWidth = computed(() => {
   const pageSize =
     store.getDynamicPageInfo?.volunteering?.settings?.pageSize || "";
 
-  if (!pageSize) return true;
+  if (!pageSize) return false;
 
   return pageSize === "page-full-width";
 });
