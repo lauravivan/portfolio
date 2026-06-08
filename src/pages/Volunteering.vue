@@ -14,7 +14,11 @@ import {
   Image,
   useStore,
 } from "@lauravivan/notion-portfolio";
-import { computed } from "vue";
+import { computed, ref } from "vue";
+
+const POSTS_PER_TIME = 5;
+
+const postsPerView = ref(POSTS_PER_TIME);
 
 const store = useStore;
 
@@ -25,39 +29,36 @@ const isPageFullWidth = computed(
 );
 
 const LINKEDIN_IFRAMES = [
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7394051440031449088?collapsed=1",
-    height: "",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7404553073404235777?collapsed=1",
-    height: "",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7420549775684431872?collapsed=1",
-    height: "",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7442942133558222848?collapsed=1",
-    height: "",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7444624334653956096?collapsed=1",
-    height: "669",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7447075507944370176?collapsed=1",
-    height: "653",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1",
-    height: "",
-  },
-  {
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1",
-    height: "",
-  },
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7394051440031449088?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7404553073404235777?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7420549775684431872?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7442942133558222848?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7444624334653956096?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7447075507944370176?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1",
 ];
+
+const getMorePosts = () => {
+  const toAdd = postsPerView.value + POSTS_PER_TIME;
+
+  if (toAdd < LINKEDIN_IFRAMES.length) {
+    postsPerView.value += POSTS_PER_TIME;
+  } else {
+    const restToAdd = LINKEDIN_IFRAMES.length - postsPerView.value;
+    postsPerView.value += restToAdd;
+  }
+};
+
+const getLessPosts = () => {
+  const toSub = postsPerView.value - POSTS_PER_TIME;
+
+  if (toSub < POSTS_PER_TIME) {
+    postsPerView.value = POSTS_PER_TIME;
+  } else {
+    postsPerView.value -= POSTS_PER_TIME;
+  }
+};
 </script>
 
 <template>
@@ -128,8 +129,8 @@ const LINKEDIN_IFRAMES = [
     >
       <Column>
         <iframe
-          :src="LINKEDIN_IFRAMES[index * 2]?.link"
-          :height="LINKEDIN_IFRAMES[index * 2]?.height || 264"
+          :src="LINKEDIN_IFRAMES[index * 2]"
+          :height="264"
           frameborder="0"
           allowfullscreen="false"
           title="Embedded post"
@@ -137,8 +138,8 @@ const LINKEDIN_IFRAMES = [
       </Column>
       <Column>
         <iframe
-          :src="LINKEDIN_IFRAMES[index * 2 + 1]?.link"
-          :height="LINKEDIN_IFRAMES[index * 2 + 1]?.height || 264"
+          :src="LINKEDIN_IFRAMES[index * 2 + 1]"
+          :height="264"
           frameborder="0"
           allowfullscreen="false"
           title="Embedded post"
@@ -147,16 +148,28 @@ const LINKEDIN_IFRAMES = [
     </Columns>
   </template>
   <template v-else>
-    <div v-for="item in LINKEDIN_IFRAMES">
+    <div v-for="item in LINKEDIN_IFRAMES.slice(0, postsPerView)">
       <iframe
-        :src="item.link"
-        :height="item.height || 264"
+        :src="item"
+        :height="264"
         width="100%"
         frameborder="0"
         allowfullscreen="false"
         title="Embedded post"
       />
     </div>
+    <button
+      v-on:click="getMorePosts()"
+      v-if="postsPerView < LINKEDIN_IFRAMES.length"
+    >
+      Ver mais
+    </button>
+    <button
+      v-on:click="getLessPosts()"
+      v-if="postsPerView === LINKEDIN_IFRAMES.length"
+    >
+      Ver menos
+    </button>
   </template>
 
   <Text>Outros:</Text>
