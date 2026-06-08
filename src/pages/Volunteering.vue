@@ -12,7 +12,52 @@ import {
   Column,
   Link,
   Image,
+  useStore,
 } from "@lauravivan/notion-portfolio";
+import { computed } from "vue";
+
+const store = useStore;
+
+const isPageFullWidth = computed(
+  () =>
+    store.getDynamicPageInfo.volunteering.settings.pageSize ===
+    "page-full-width",
+);
+
+const LINKEDIN_IFRAMES = [
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7394051440031449088?collapsed=1",
+    height: "",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7404553073404235777?collapsed=1",
+    height: "",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7420549775684431872?collapsed=1",
+    height: "",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7442942133558222848?collapsed=1",
+    height: "",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7444624334653956096?collapsed=1",
+    height: "669",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7447075507944370176?collapsed=1",
+    height: "653",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1",
+    height: "",
+  },
+  {
+    link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1",
+    height: "",
+  },
+];
 </script>
 
 <template>
@@ -73,94 +118,46 @@ import {
   >
 
   <Heading :level="2">What I have been posting about 👀</Heading>
-  <Columns :number-of-columns="2">
-    <Column
-      ><iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7394051440031449088?collapsed=1"
-        height="264"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe
-    ></Column>
-    <Column>
+  <template v-if="isPageFullWidth">
+    <Columns
+      :number-of-columns="2"
+      v-for="index in Array.from({
+        length: LINKEDIN_IFRAMES.length / 2,
+      }).keys()"
+      :key="index"
+    >
+      <Column>
+        <iframe
+          :src="LINKEDIN_IFRAMES[index * 2]?.link"
+          :height="LINKEDIN_IFRAMES[index * 2]?.height || 264"
+          frameborder="0"
+          allowfullscreen="false"
+          title="Embedded post"
+        />
+      </Column>
+      <Column>
+        <iframe
+          :src="LINKEDIN_IFRAMES[index * 2 + 1]?.link"
+          :height="LINKEDIN_IFRAMES[index * 2 + 1]?.height || 264"
+          frameborder="0"
+          allowfullscreen="false"
+          title="Embedded post"
+        />
+      </Column>
+    </Columns>
+  </template>
+  <template v-else>
+    <div v-for="item in LINKEDIN_IFRAMES">
       <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7404553073404235777?collapsed=1"
-        height="264"
-        width="504"
+        :src="item.link"
+        :height="item.height || 264"
+        width="100%"
         frameborder="0"
         allowfullscreen="false"
         title="Embedded post"
-      ></iframe
-    ></Column>
-  </Columns>
-  <Columns :number-of-columns="2">
-    <Column
-      ><iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7420549775684431872?collapsed=1"
-        height="264"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe
-    ></Column>
-    <Column>
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7442942133558222848?collapsed=1"
-        height="264"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe
-    ></Column>
-  </Columns>
-  <Columns :number-of-columns="2">
-    <Column
-      ><iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7444624334653956096?collapsed=1"
-        height="669"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe>
-    </Column>
-    <Column>
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7447075507944370176?collapsed=1"
-        height="653"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe>
-    </Column>
-  </Columns>
-  <Columns :number-of-columns="2">
-    <Column>
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1"
-        height="264"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe>
-    </Column>
-    <Column>
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1"
-        height="264"
-        width="504"
-        frameborder="0"
-        allowfullscreen="false"
-        title="Embedded post"
-      ></iframe>
-    </Column>
-  </Columns>
+      />
+    </div>
+  </template>
 
   <Text>Outros:</Text>
   <BulletList>
