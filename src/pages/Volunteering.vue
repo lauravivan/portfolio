@@ -23,7 +23,8 @@ const postsPerView = ref(POSTS_PER_TIME);
 const store = useStore;
 
 const isPageFullWidth = computed(() => {
-  const pageSize = store.getDynamicPageInfo.volunteering.settings.pageSize;
+  const pageSize =
+    store.getDynamicPageInfo?.volunteering?.settings?.pageSize || "";
 
   if (!pageSize) return true;
 
