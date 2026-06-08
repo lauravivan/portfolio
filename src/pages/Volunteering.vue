@@ -22,11 +22,13 @@ const postsPerView = ref(POSTS_PER_TIME);
 
 const store = useStore;
 
-const isPageFullWidth = computed(
-  () =>
-    store.getDynamicPageInfo.volunteering.settings.pageSize ===
-    "page-full-width",
-);
+const isPageFullWidth = computed(() => {
+  const pageSize = store.getDynamicPageInfo.volunteering.settings.pageSize;
+
+  if (!pageSize) return true;
+
+  return pageSize === "page-full-width";
+});
 
 const LINKEDIN_IFRAMES = [
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7394051440031449088?collapsed=1",
