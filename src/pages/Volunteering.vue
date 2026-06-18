@@ -40,8 +40,6 @@ const LINKEDIN_IFRAMES = [
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7447075507944370176?collapsed=1",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7447877378875478016?collapsed=1",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7469478109814284288?collapsed=1",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7469481664696741888?collapsed=1",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7469485871076069376?collapsed=1"
 ];
