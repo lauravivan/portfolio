@@ -12,7 +12,7 @@ import {
 </script>
 
 <template>
-  <Text>As a freelancer I had the opportunity to work in local and international projects. I spend some months in Souldev working in projects like Lyva and Estudos Arquivados, but also, in the end of 2025 I briefly helped in frontend features for projects of <TextHighlight>Canada</TextHighlight> and <TextHighlight>USA</TextHighlight> where I was able to work with technologies I usually don't, like Angular.js</Text>
+  <Text>As a freelancer I had the opportunity to work in local and international projects. I spend some months in Souldev working in projects like Lyva and Estudos Arquivados, but also, in the end of 2025 I briefly helped in frontend features for projects of <TextHighlight>Canada</TextHighlight> (a technology-enabled B2B marketplace that simplifies wholesale plant and tree procurement for landscaping professionals through sourcing, procurement, and logistics management services) and <TextHighlight>a Nova York startup</TextHighlight> (monitoring unauthorized use of intellectual property (IP)) where I was able to work with technologies I usually don't, like Angular.js</Text>
 
   <Heading :level="2">Lyva & Estudos Arquivados</Heading>
 
