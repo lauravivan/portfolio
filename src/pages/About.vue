@@ -13,6 +13,7 @@ import {
   LinkMention,
   TextHighlight,
   Column,
+  Link
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -56,7 +57,7 @@ import {
         </BulletItem>
         <BulletItem
           >As a freelancer I helped to build a platform to be used by Portuguese
-          students in filtering content on [arquivo.pt](http://arquivo.pt/) API.
+          students in filtering content on <Link href="http://arquivo.pt/">arquivo.pt</Link> API.
           This project also uses LLM to help creating context and keywords to
           help with more assertive research.
         </BulletItem>
