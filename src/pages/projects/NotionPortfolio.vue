@@ -5,6 +5,7 @@ import {
   Heading,
   BulletList,
   BulletItem,
+  Empty
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -78,5 +79,13 @@ import {
 
   <LinkMention href="https://notionportfolio.arualvivan.com" emoji="🍃"
     >Notion Portfolio</LinkMention
+  >
+
+  <Empty/>
+
+  <Heading :level="4">Documentation</Heading>
+  
+   <LinkMention href="http://notionportfolio-docs.arualvivan.com" emoji="🍃"
+    >Dev and client documentation</LinkMention
   >
 </template>
