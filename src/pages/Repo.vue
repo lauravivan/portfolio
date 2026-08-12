@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { GH_REPO_URL } from "@/constants";
+import loadGhData from "@/loadGhData";
+import metadata from "@/metadata";
 import {
   Empty,
   Text,
@@ -7,7 +9,7 @@ import {
   useStore,
 } from "@lauravivan/notion-portfolio";
 import { storeToRefs } from "pinia";
-import { onMounted, ref } from "vue";
+import { onBeforeMount, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -21,10 +23,13 @@ const starCount = ref(0);
 const watchCount = ref(0);
 const forkCount = ref(0);
 
-onMounted(async () => {
+const load = async () => {
   const paramId = route.params.id;
 
-  const id = paramId && typeof paramId === "string" ? paramId : store.getCurrentModalPageId.value;
+  const id =
+    paramId && typeof paramId === "string"
+      ? paramId
+      : store.getCurrentModalPageId.value;
 
   if (id) {
     try {
@@ -37,9 +42,26 @@ onMounted(async () => {
       starCount.value = resJSON.stargazers_count;
       watchCount.value = resJSON.watchers_count;
       forkCount.value = resJSON.forks_count;
+
+      metadata.pages.repo = {
+        ...metadata.pages.repo,
+        title: id,
+      };
     } catch {}
   }
+};
+
+onBeforeMount(async () => {
+  await loadGhData();
+  load();
 });
+
+watch(
+  () => route.params.id,
+  () => {
+    load();
+  }
+);
 </script>
 
 <template>
@@ -47,9 +69,9 @@ onMounted(async () => {
 
   <Empty />
 
-  <Text>Description: {{ desc }}</Text>
+  <Text v-if="desc">Description: {{ desc }}</Text>
 
-  <Empty />
+  <Empty v-if="desc" />
 
   <Text>
     <TextHighlight>Link github: </TextHighlight>

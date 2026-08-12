@@ -16,6 +16,7 @@ import NotionPortfolio from "@/pages/projects/NotionPortfolio.vue";
 import Volunteering from "@/pages/Volunteering.vue";
 import Yoko from "@/pages/projects/Yoko.vue";
 import Repo from "@/pages/Repo.vue";
+import Koda from "@/pages/projects/Koda.vue";
 
 const metadata: IMetadata = {
   user: {
@@ -167,7 +168,7 @@ const metadata: IMetadata = {
       },
       component: Projects,
       path: "/projects",
-      pages: ["notion-portfolio", "yoko"],
+      pages: ["notionportfolio", "yoko"],
     },
     github: {
       id: "github",
@@ -180,7 +181,7 @@ const metadata: IMetadata = {
       },
       component: Github,
       path: "/github",
-      pages: ["repo"],
+      pages: [],
     },
     repo: {
       id: "repo",
@@ -192,14 +193,17 @@ const metadata: IMetadata = {
       path: `/github/:id`,
       parentPage: "github",
     },
-    "notion-portfolio": {
-      id: "notion-portfolio",
+    notionportfolio: {
+      id: "notionportfolio",
       title: "Notion Portfolio",
       component: NotionPortfolio,
       parentPage: "projects",
-      path: "/notion-portfolio",
+      path: "/notionportfolio",
+      banner: {
+        path: "/banners/notion-portfolio.webp",
+      },
       icon: {
-        path: "/icons/about.png",
+        path: "/icons/notionportfolio.png",
       },
       databaseInfo: {
         Created: {
@@ -231,7 +235,30 @@ const metadata: IMetadata = {
         },
         Tags: {
           icon: "code",
-          value: ["TypeScript", "React.js", "React router", 'Zustand'],
+          value: ["TypeScript", "React.js", "React router", "Zustand"],
+        },
+      },
+    },
+    koda: {
+      id: "koda",
+      title: "Koda",
+      component: Koda,
+      parentPage: "projects",
+      path: "/koda",
+      banner: {
+        path: "/banners/koda.webp",
+      },
+      icon: {
+        path: "/icons/koda.png",
+      },
+      databaseInfo: {
+        Created: {
+          icon: "clock",
+          value: "Aug 2026",
+        },
+        Tags: {
+          icon: "code",
+          value: ["TypeScript", "Vue.js", "Vue router"],
         },
       },
     },
