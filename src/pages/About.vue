@@ -91,15 +91,15 @@ import {
   <Empty />
 
   <LinkMention
-    href="https://docs.google.com/document/d/1ZxWvOuzFilptDO9jme-KYIWj6EqhW9Ws-hQFZl-PhIY/edit?usp=sharing"
+    href="/cv-LauraVivan.pdf"
     emoji="👋"
     >Access my resume in Portuguese</LinkMention
   >
 
   <LinkMention
-    href=""
+    href="/cv-en-LauraVivan.pdf"
     emoji="👋"
-    >Access my resume in English (in progress...)</LinkMention
+    >Access my resume in English</LinkMention
   >
 
   <Empty />
