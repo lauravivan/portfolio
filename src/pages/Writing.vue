@@ -10,6 +10,6 @@ import { Text, Link, Heading, Bookmark } from "@lauravivan/notion-portfolio";
 
   <Bookmark
     :link="`https://blog.arualvivan.com/blog/uml-distilled/`"
-    :title="`UML distilled, a brief guide to the standard Object Modeling Language`"
+    :title="`UML distilled, a brief guide to the standard Object Modeling Language: Class Diagram`"
   />
 </template>
