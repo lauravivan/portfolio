@@ -1,5 +1,5 @@
 import Freelance from "@/pages/Freelance.vue";
-import Articles from "@/pages/Articles.vue";
+import Writing from "@/pages/Writing.vue";
 import Certifications from "@/pages/Certifications.vue";
 import College from "@/pages/College.vue";
 import Contact from "@/pages/Contact.vue";
@@ -37,17 +37,17 @@ const metadata: IMetadata = {
       component: Homepage,
       path: "/",
     },
-    articles: {
-      id: "articles",
-      title: "My articles",
+    writing: {
+      id: "writing",
+      title: "Writing",
       banner: {
-        path: "/banners/articles.webp",
+        path: "/banners/writing.webp",
       },
       icon: {
-        path: "/icons/articles.png",
+        path: "/icons/writing.png",
       },
-      component: Articles,
-      path: "/articles",
+      component: Writing,
+      path: "/writing",
     },
     certifications: {
       id: "certifications",
