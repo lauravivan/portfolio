@@ -21,7 +21,7 @@ import Koda from "@/pages/projects/Koda.vue";
 const metadata: IMetadata = {
   user: {
     author: `Laura Vivan's Portfolio`,
-    socialMedia: "@lauravivan",
+    socialMedia: "@lauvivans",
   },
   pages: {
     about: {
