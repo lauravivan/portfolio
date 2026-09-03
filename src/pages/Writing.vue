@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import { Text, Link, Heading, Bookmark } from "@lauravivan/notion-portfolio";
+import { Bookmark, Heading } from "@lauravivan/notion-portfolio";
 </script>
 
 <template>
-  <Text>I've created a blog with Astro to gather my writings.</Text>
-  <Link :href="`https://blog.arualvivan.com/`">My blog</Link>
-
-  <Heading :level="2">What I've posted so far</Heading>
+  <Heading :level="2">2026</Heading>
+  <Heading :level="3">Aug</Heading>
 
   <Bookmark
-    :link="`https://blog.arualvivan.com/blog/uml-distilled/`"
-    :title="`UML distilled, a brief guide to the standard Object Modeling Language: Class Diagram`"
+    :title="'Every engineer is also a writer'"
+    :link="'https://koda.arualvivan.com/blog/blog-post/every%E2%80%93engineer-is-a-writer'"
+  />
+
+  <Heading :level="2">2025</Heading>
+  <Heading :level="3">Jun</Heading>
+
+  <Bookmark
+    :title="'UML distilled, a brief guide to the standard Object Modeling Language: Class Diagram'"
+    :link="'https://koda.arualvivan.com/blog/blog-post/class-diagram-uml-distilled'"
   />
 </template>
