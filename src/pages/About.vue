@@ -1,86 +1,83 @@
 <script setup lang="ts">
 import {
   Callout,
-  Columns,
   BulletList,
   BulletItem,
   Divider,
   Text,
-  ToDoList,
-  ToDoItem,
   Empty,
   Heading,
   LinkMention,
-  TextHighlight,
-  Column,
-  Link
 } from "@lauravivan/notion-portfolio";
 </script>
 
 <template>
-  <Text>Hey there 👋!</Text>
-  
   <Text
     >My name is Laura, and I'm a passionate Web developer building end to end
     web applications. Here in my portfolio you can access my projects and
     achievments.
   </Text>
 
-  <Empty/>
-  <Columns :number-of-columns="3">
-    <Column>
-      <Callout>Education...</Callout>
-      <BulletList>
-        <BulletItem>
-          I made a year of Computer Science at Universidade Regional de Blumenau
-          (FURB) before migrating to IS in another city. In my first year having
-          contact with this world I discovered a taste for logic, programming
-          and databases. My first high level programming language was Java and
-          continued after I moved on from institution.
-        </BulletItem>
-        <BulletItem
-          >Information Systems graduate at Instituto Federal de Santa Catarina
-          (IFSC).</BulletItem
-        >
-      </BulletList>
-    </Column>
+  <Text>
+    I have a strong foundation in Front-End development and a growing interest
+    in becoming a well-rounded Full Stack Web Developer. I hold a degree in
+    Information Systems from the Instituto Federal de Santa Catarina (IFSC),
+    where I had the opportunity to work on projects that combined technology
+    with real-world challenges. One of these experiences was a university
+    extension project focused on developing a web application with Django to
+    automate the triage process in health centers and hospitals.
+  </Text>
 
-    <Column>
-      <Callout>Projects...</Callout>
-      <BulletList>
-        <BulletItem>
-          I was two times scholarship holder in University-Funded Extension
-          Program. I helped to develop a web system for risk classification
-          using Django Framework. Also, I develop an accessible system to
-          reunite accessibility guidelines helping developers and interested
-          people to build more accessible platforms.
-        </BulletItem>
-        <BulletItem
-          >As a freelancer I helped to build a platform to be used by Portuguese
-          students in filtering content on <Link href="http://arquivo.pt/">arquivo.pt</Link> API.
-          This project also uses LLM to help creating context and keywords to
-          help with more assertive research.
-        </BulletItem>
-        <BulletItem
-          >Still, as freelancer, I developed from scratch a web system to help
-          payment splitting between health professionals. The platform
-          communicates with an external payment API.</BulletItem
-        ></BulletList
-      >
-    </Column>
+  <Text
+    >But I also made one year of Computer Science at Universidade Regional de
+    Blumenau (FURB), where I discovered a taste for logic, programming and
+    databases. My first high level programming language was Java.</Text
+  >
 
-    <Column>
-      <Callout>Goals...</Callout>
-      <BulletList
-        ><BulletItem
-          >Improve even further the necessary habilities to create great web
-          applications</BulletItem
-        ><BulletItem
-          >Web development (full-stack) mid-level</BulletItem
-        ></BulletList
-      >
-    </Column>
-  </Columns>
+  <Text>
+    Throughout my journey, I've also worked on projects with a strong focus on
+    accessibility and social impact. I developed AcessiWeb, a web system
+    designed to make WCAG accessibility guidelines easier to understand while
+    implementing some of these practices directly into the application to
+    improve the experience for users with different accessibility needs. Later,
+    I joined Lacrei Saúde, a social-impact health tech that connects the
+    LGBTQIAPN+ community with inclusive and qualified healthcare professionals,
+    where I grew as a developer and eventually took on the role of Front-End
+    Tech Lead.
+  </Text>
+
+  <Text>
+    My professional experience also includes working as a contractor on a
+    payment management system that helps companies manage partners, services,
+    and charges while processing payments to multiple partners through a single
+    transaction. The system integrates with a payment API and gave me valuable
+    experience building solutions around real business needs. I also contributed
+    to Estudos Arquivados, a project that uses the arquivo.pt API to help
+    Portuguese students find relevant academic content based on their school
+    year and subjects. The project also leverages OpenAI's LLM to identify
+    related words and expressions from user input, improving the accuracy of the
+    search filters.
+  </Text>
+
+  <Text>
+    Outside of professional projects, I enjoy experimenting and learning through
+    side projects such as Notion-portfolio, Yoko!, and Koda. These projects
+    allow me to explore new ideas, technologies, and approaches while continuing
+    to grow as a developer. Overall, I'm driven by curiosity and a desire to
+    build useful, accessible, and well-crafted web experiences—and I'm excited
+    to keep expanding my skills toward becoming a great Full Stack Web
+    Developer.
+  </Text>
+
+  <Empty />
+
+  <Callout>What my goals are?</Callout>
+  <BulletList
+    ><BulletItem
+      >Improve even further the necessary habilities to create great web
+      applications</BulletItem
+    ><BulletItem>Web development (full-stack) mid-level</BulletItem></BulletList
+  >
 
   <Empty />
 
@@ -90,124 +87,11 @@ import {
 
   <Empty />
 
-  <LinkMention
-    href="/cv-LauraVivan.pdf"
-    emoji="👋"
+  <LinkMention href="/cv-LauraVivan.pdf" emoji="👋"
     >Access my resume in Portuguese</LinkMention
   >
 
-  <LinkMention
-    href="/cv-en-LauraVivan.pdf"
-    emoji="👋"
+  <LinkMention href="/cv-en-LauraVivan.pdf" emoji="👋"
     >Access my resume in English</LinkMention
   >
-
-  <Empty />
-
-  <Divider />
-
-  <Heading :level="3">Technologies</Heading>
-
-  <Text
-    >What I had/have contact with will be checked, things that I want start
-    having contact with and to dive deep will be unchecked</Text
-  >
-
-  <Empty />
-
-  <Columns :number-of-columns="5">
-    <Column>
-      <TextHighlight>Programming Languages</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">JavaScript</ToDoItem>
-        <ToDoItem :is-checked="true">TypeScript</ToDoItem>
-        <ToDoItem :is-checked="true">Java</ToDoItem>
-        <ToDoItem :is-checked="true">Python</ToDoItem>
-      </ToDoList>
-      <Empty />
-      <TextHighlight>Devops & Cloud</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">Docker</ToDoItem>
-        <ToDoItem>Kubernetes</ToDoItem>
-        <ToDoItem>AWS</ToDoItem>
-        <ToDoItem>Azure</ToDoItem>
-        <ToDoItem :is-checked="true"
-          >Google Cloud: cloud functions, firebase</ToDoItem
-        >
-        <ToDoItem :is-checked="true">Github Actions</ToDoItem>
-      </ToDoList>
-    </Column>
-    <Column>
-      <TextHighlight>Building APIs</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">Express.js</ToDoItem>
-        <ToDoItem :is-checked="true">Node.js</ToDoItem>
-        <ToDoItem :is-checked="true">Nest.js</ToDoItem>
-        <ToDoItem>Swagger</ToDoItem>
-        <ToDoItem :is-checked="true">Postman</ToDoItem>
-        <ToDoItem :is-checked="true">Insomnia</ToDoItem>
-        <ToDoItem :is-checked="true">Yaak</ToDoItem>
-        <ToDoItem :is-checked="true">ReDoc</ToDoItem>
-      </ToDoList>
-      <Empty />
-      <TextHighlight>CLI tools</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">Git</ToDoItem>
-        <ToDoItem :is-checked="true">Curl</ToDoItem>
-      </ToDoList>
-      <Empty />
-    </Column>
-    <Column>
-      <TextHighlight>Building UIs</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">React.js</ToDoItem>
-        <ToDoItem :is-checked="true">Vue.js</ToDoItem>
-        <ToDoItem :is-checked="true">Next.js</ToDoItem>
-        <ToDoItem :is-checked="true">TanStack Query</ToDoItem>
-        <ToDoItem :is-checked="true">React Hook Form</ToDoItem>
-        <ToDoItem :is-checked="true">React Router</ToDoItem>
-        <ToDoItem :is-checked="true">Vuex</ToDoItem>
-        <ToDoItem :is-checked="true">Pinia</ToDoItem>
-        <ToDoItem :is-checked="true">Vue Router</ToDoItem>
-        <ToDoItem :is-checked="true">SASS</ToDoItem>
-        <ToDoItem :is-checked="true">TailwindCSS</ToDoItem>
-        <ToDoItem :is-checked="true">Bootstrap</ToDoItem>
-        <ToDoItem :is-checked="true">Styled Components</ToDoItem>
-        <ToDoItem :is-checked="true">Figma</ToDoItem>
-        <ToDoItem :is-checked="true">Canva</ToDoItem>
-        <ToDoItem :is-checked="true">Vite</ToDoItem>
-        <ToDoItem :is-checked="true">Webpack</ToDoItem>
-        <ToDoItem :is-checked="true">ESLint</ToDoItem>
-        <ToDoItem :is-checked="true">Prettier</ToDoItem>
-        <ToDoItem :is-checked="true">Browser Dev Tools</ToDoItem>
-        <ToDoItem :is-checked="true">NextAuth.js</ToDoItem></ToDoList
-      >
-    </Column>
-    <Column>
-      <TextHighlight>Database</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">PostgreSQL</ToDoItem>
-        <ToDoItem :is-checked="true">MongoDB</ToDoItem>
-        <ToDoItem :is-checked="true">MySQL</ToDoItem>
-        <ToDoItem :is-checked="true">HeidiSQL/MariaDB</ToDoItem>
-        <ToDoItem :is-checked="true">SQLite</ToDoItem>
-        <ToDoItem :is-checked="true">Firestore</ToDoItem>
-        <ToDoItem :is-checked="true">TypeORM</ToDoItem>
-        <ToDoItem :is-checked="true">Mongoose</ToDoItem>
-        <ToDoItem>Prisma</ToDoItem>
-        <ToDoItem :is-checked="true">Sequelize</ToDoItem>
-        <ToDoItem :is-checked="true">SQL</ToDoItem>
-      </ToDoList>
-    </Column>
-    <Column>
-      <TextHighlight>Testing</TextHighlight>
-      <ToDoList>
-        <ToDoItem :is-checked="true">Vitest</ToDoItem>
-        <ToDoItem :is-checked="true">Jest</ToDoItem>
-        <ToDoItem :is-checked="true">Selenium</ToDoItem>
-        <ToDoItem :is-checked="true">Testcontainers</ToDoItem>
-        <ToDoItem :is-checked="true">Testing Library</ToDoItem>
-      </ToDoList>
-    </Column>
-  </Columns>
 </template>
