@@ -5,6 +5,7 @@ import {
   BulletList,
   Empty,
   Link,
+  Image,
 } from "@lauravivan/notion-portfolio";
 </script>
 
@@ -26,33 +27,31 @@ import {
   <Callout>Where you can find me</Callout>
 
   <BulletList>
-    <BulletItem
-      >LinkedIn:
+    <BulletItem>
+      <Image src="/linkedin.svg" />
       <Link href="https://linkedin.com/in/vivan-laura"
-        >linkedin.com/in/vivan-laura</Link
+        >Linkedin</Link
       ></BulletItem
     >
-    <BulletItem
-      >Github:
-      <Link href="https://github.com/lauravivan"
-        >github.com/lauravivan</Link
-      ></BulletItem
+    <BulletItem>
+      <Image src="/github.svg" />
+      <Link href="https://github.com/lauvivans">Github</Link></BulletItem
     >
-    <BulletItem
-      >Devto:
-      <Link href="https://dev.to/vivanlaura"
-        >dev.to/vivanlaura</Link
-      ></BulletItem
+    <BulletItem>
+      <Image src="/devto.svg" />
+      <Link href="https://dev.to/lauvivans">dev.to</Link></BulletItem
     >
-    <BulletItem
-      >Medium:
-      <Link href="https://medium.com/@lauvivang"
-        >medium.com/@lauvivang</Link
-      ></BulletItem
+    <BulletItem>
+      <Image src="/medium.svg" />
+      <Link href="https://medium.com/lauvivans">Medium</Link></BulletItem
     >
-    <BulletItem
-      >X:
-      <Link href="https://x.com/lauvivans">x.com/lauvivans</Link></BulletItem
-    >
+    <BulletItem> <Link href="https://x.com/lauvivans">X</Link></BulletItem>
   </BulletList>
 </template>
+
+<style lang="css">
+.img-wrapper {
+  flex: none;
+  max-width: 5%;
+}
+</style>
