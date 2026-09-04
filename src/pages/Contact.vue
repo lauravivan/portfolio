@@ -49,7 +49,7 @@ import {
   </BulletList>
 </template>
 
-<style lang="css">
+<style scoped lang="css">
 .img-wrapper {
   flex: none;
   max-width: 5%;
